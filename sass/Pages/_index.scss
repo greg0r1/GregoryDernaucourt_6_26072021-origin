@@ -1,0 +1,31 @@
+.photographers {
+    header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+
+        h1 {
+            margin: -5.8rem 0 3rem;
+            padding: 20px 0;
+        }
+
+
+        @include tablet-only {
+            h1 {
+                margin-top: -7.5rem;
+            }
+        }
+
+        @include mobile-only {
+            h1 {
+                margin-top: -10.5rem;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,15 @@
+/* 
+* Nav: with "tag" components
+ */
+
+.nav {
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 0;
+    }
+}

@@ -1,0 +1,258 @@
+/*
+* Variables
+*/
+/* Colors */
+/* Breakpoints */
+/* Breakpoints */
+/*
+* _base.scss
+*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap");
+:root [type=button]:not(:disabled),
+:root [type=reset]:not(:disabled),
+:root [type=submit]:not(:disabled),
+:root button:not(:disabled) {
+  cursor: pointer;
+}
+:root [type=button],
+:root [type=reset],
+:root [type=submit],
+:root button {
+  -webkit-appearance: button;
+}
+:root a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #901c1c;
+}
+
+body {
+  margin: auto;
+  padding: 10px;
+  width: auto;
+  min-width: fit-content;
+  max-width: 1024px;
+}
+
+/*
+* _typography.scss
+*/
+/* Font */
+:root {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* Logo */
+/* 
+* Dropdown button: filter
+ */
+.dropdown {
+  margin: 2rem;
+  max-width: max-content;
+  position: relative;
+}
+.dropdown .btn.dropdown-toggle {
+  position: relative;
+}
+.dropdown .btn {
+  border-radius: 0.25rem;
+  background-color: #901c1c;
+  padding: 1rem 1.2rem;
+}
+.dropdown .btn,
+.dropdown .dropdown-item {
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.dropdown .dropdown-menu {
+  border-radius: 0 0 0.25rem 0.25rem;
+  position: absolute;
+  margin-top: 0.9rem;
+  width: 100%;
+}
+.dropdown.show .dropdown-item, .dropdown.show .dropdown-divider {
+  display: none;
+}
+.dropdown .dropdown-item {
+  float: left;
+  padding: 0.8rem 1.2rem;
+}
+.dropdown .dropdown-item, .dropdown .dropdown-divider {
+  display: block;
+}
+.dropdown .dropdown-menu {
+  background-color: #901c1c;
+}
+.dropdown-divider {
+  height: 0;
+  margin: auto;
+  overflow: hidden;
+  border-top: 1px solid #fff;
+  width: 80%;
+}
+.dropdown .fas.fa-chevron-down,
+.dropdown .fas.fa-chevron-up {
+  margin: 0 0 0 1rem;
+}
+
+/* 
+* Logo: Fisheye
+ */
+#logo {
+  padding: 20px;
+}
+
+.article {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 10px;
+  flex-shrink: 1;
+  min-width: fit-content;
+}
+.article__img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  align-items: center;
+}
+.article a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article__title {
+  width: 100%;
+  color: #d3573c;
+  margin: 0;
+  padding: 2rem 0 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: center;
+}
+.article__details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.article__details p {
+  margin: auto;
+  padding: 0.1rem;
+  font-size: 0.8rem;
+}
+.article__details p:first-child {
+  color: #901c1c;
+  font-size: 1rem;
+}
+.article__details p:last-child {
+  color: #525252;
+}
+.article__tags {
+  width: 100%;
+  margin: 5px auto;
+}
+.article__tags ul {
+  margin: auto;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* 
+* Tag: header
+ */
+.tag {
+  color: #901c1c;
+  padding: 1px 5px;
+  margin: 2px;
+  list-style: none;
+  border: 1px solid #cccccc;
+  border-radius: 1rem;
+  width: fit-content;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+@media screen and (max-width: 599px) {
+  .tag {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
+
+#header {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* 
+* Nav: with "tag" components
+ */
+.nav .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0;
+}
+
+.photographers header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+.photographers header h1 {
+  margin: -5.8rem 0 3rem;
+  padding: 20px 0;
+}
+@media screen and (min-width: 599px) and (max-width: 1024px) {
+  .photographers header h1 {
+    margin-top: -7.5rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .photographers header h1 {
+    margin-top: -10.5rem;
+  }
+}
+.photographers .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=style.css.map */

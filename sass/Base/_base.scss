@@ -1,0 +1,35 @@
+/*
+* _base.scss
+*/
+:root {
+
+    [type="button"]:not(:disabled),
+    [type="reset"]:not(:disabled),
+    [type="submit"]:not(:disabled),
+    button:not(:disabled) {
+        cursor: pointer;
+    }
+
+    [type="button"],
+    [type="reset"],
+    [type="submit"],
+    button {
+        -webkit-appearance: button;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+h1 {
+    color: $color-secondary-txt-dark;
+}
+
+body {
+    margin: auto;
+    padding: 10px;
+    width: auto;
+    min-width: fit-content;
+    max-width: 1024px;
+}

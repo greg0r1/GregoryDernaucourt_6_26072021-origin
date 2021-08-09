@@ -1,0 +1,21 @@
+/* 
+* Tag: header
+ */
+
+.tag {
+    color: $color-secondary-txt-dark;
+    padding: 1px 5px;
+    margin: 2px;
+    list-style: none;
+    border: 1px solid #cccccc;
+    border-radius: 1rem;
+    width: fit-content;
+    font-size: .7rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    @include mobile-only {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+}
