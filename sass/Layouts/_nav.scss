@@ -4,6 +4,14 @@
 
 .nav {
 
+    @include mobile-only {
+        margin: auto;
+    }
+
+    @include tablet-only {
+        margin: auto;
+    }
+
     .tags {
         display: flex;
         flex-wrap: wrap;

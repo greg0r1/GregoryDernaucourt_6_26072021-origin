@@ -1,0 +1,95 @@
+.photographerHeader {
+
+    background: $color-secondary-bg-medium;
+    display: flex;
+    border-radius: 5px;
+    padding: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+    .details {
+        align-items: flex-start;
+        width: auto;
+        @include details;
+
+        .title {
+            @include title
+        }
+
+        .localisation {
+            font-size: 1.3rem;
+        }
+
+        .tagline {
+            color: $color-secondary-txt-medium;
+        }
+
+        .tags {
+
+            ul {
+                display: flex;
+                justify-content: flex-start;
+                margin: auto;
+                padding: 0;
+            }
+        }
+
+        .title,
+        .localisation,
+        .tagline,
+        .tags {
+            margin: .6rem 0;
+        }
+
+    }
+
+    .button {
+        align-self: flex-start;
+        margin: 1rem 2rem;
+
+        @include mobile-only {
+            position: absolute;
+            bottom: 1rem;
+            left: 25%;
+            right: 25%;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 1rem .5rem;
+            @include btn
+        }
+    }
+
+    .img {
+        margin-left: auto;
+        @include image
+    }
+
+    .info {
+        position: fixed;
+        display: flex;
+        bottom: 0;
+        right: 20px;
+        padding: .9rem;
+        background: $color-secondary-bg-dark;
+        border-radius: 5px 5px 0 0;
+
+        .price {
+            margin: 0 10px 0 20px;
+        }
+
+        .likes {
+            margin: 0 20px 0 10px;
+        }
+
+        .likes span {
+            margin: 0 .2rem;
+        }
+    }
+
+
+}

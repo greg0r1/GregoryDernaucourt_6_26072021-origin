@@ -1,0 +1,107 @@
+.lightbox-bg {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+
+    .lightbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 1rem;
+        width: 80%;
+        height: 80%;
+        max-width: 1200px;
+        overflow: hidden;
+
+        @include btn-close;
+
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            width: 32px;
+            height: 32px;
+            opacity: 1;
+            cursor: pointer;
+            transform: scale(0.7);
+            z-index: 10;
+            background: transparent;
+            border: none;
+        }
+
+        .close:before,
+        .close:after {
+            background-color: $color-primary-bg-dark;
+        }
+
+        &__next,
+        &__prev {
+            cursor: pointer;
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            padding: 16px;
+            background: url("data:image/svg+xml,%3Csvg width='30' height='48' viewBox='0 0 30 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.360108 5.64L18.6801 24L0.360107 42.36L6.00011 48L30.0001 24L6.00011 3.88195e-06L0.360108 5.64Z' fill='%23911C1C'/%3E%3C/svg%3E%0A") no-repeat center;
+            border: none;
+        }
+
+        &__next {
+            right: 0;
+        }
+
+        &__prev {
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+        &__container {
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img {
+            display: flex;
+            margin: auto;
+            box-sizing: border-box;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        figure {
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        figcaption {
+            text-align: center;
+            padding: 2px 16px;
+            color: $color-primary-bg-dark;
+            margin-right: auto;
+            padding: 1rem 0px;
+        }
+    }
+}
