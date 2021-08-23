@@ -14,10 +14,10 @@
         color: initial;
     }
 
-    .content {
+    .modalContent {
         position: absolute;
         min-width: fit-content;
-        width: 50%;
+        width: 550px;
         height: auto;
         padding: 1.5rem;
         background: $color-secondary-bg-dark;

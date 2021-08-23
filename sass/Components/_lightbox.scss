@@ -25,10 +25,13 @@
 
         .close {
             position: absolute;
-            right: 15px;
-            top: 15px;
-            width: 32px;
-            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
             opacity: 1;
             cursor: pointer;
             transform: scale(0.7);
@@ -47,7 +50,7 @@
             cursor: pointer;
             position: absolute;
             width: 100px;
-            height: 100%;
+            height: 100px;
             padding: 16px;
             background: url("data:image/svg+xml,%3Csvg width='30' height='48' viewBox='0 0 30 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.360108 5.64L18.6801 24L0.360107 42.36L6.00011 48L30.0001 24L6.00011 3.88195e-06L0.360108 5.64Z' fill='%23911C1C'/%3E%3C/svg%3E%0A") no-repeat center;
             border: none;

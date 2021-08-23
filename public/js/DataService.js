@@ -33,6 +33,12 @@ export default class DataService {
         });
     }
 
+    getPhotographerById(idPhotographer) {
+        return this.photographers.find(obj => {
+            return obj.id === idPhotographer
+        });
+    }
+
     getTotalOfLikes(idPhotographer) {
         const photographerMedias = this.medias.filter(obj => obj.photographerId === idPhotographer);
         var arrayOfLikes = [];
@@ -69,8 +75,7 @@ export default class DataService {
 
     getTags() {
         const allTags = this.photographers.reduce(
-            (allTags, { tags }) => [...allTags, ...tags], []
-        );
+            (allTags, { tags }) => [...allTags, ...tags], []);
         return Array.from(new Set(allTags))
     }
 

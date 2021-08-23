@@ -33,7 +33,7 @@ body {
   margin: auto;
   padding: 10px;
   width: auto;
-  max-width: 1024px;
+  max-width: 1200px;
 }
 
 /*
@@ -131,6 +131,7 @@ body {
 .filter .dropdown .fas.fa-chevron-down,
 .filter .dropdown .fas.fa-chevron-up {
   margin: 0 0 0 1rem;
+  padding: 0.2rem;
 }
 
 /* 
@@ -326,6 +327,7 @@ body {
   padding: 0.9rem;
   background: #db8876;
   border-radius: 5px 5px 0 0;
+  cursor: initial;
 }
 .photographerHeader .info .price {
   margin: 0 10px 0 20px;
@@ -348,8 +350,8 @@ body {
   flex-direction: row;
 }
 .medias .container .media {
-  margin: 0 0 1.5rem 0;
   color: #901c1c;
+  margin: 1.5rem auto;
 }
 .medias .container .media figcaption {
   display: flex;
@@ -381,6 +383,24 @@ body {
   object-fit: cover;
 }
 
+.scrollToMainButton {
+  display: none;
+}
+.scrollToMainButton.display {
+  display: block;
+  position: fixed;
+  top: 0.2rem;
+  right: 50%;
+  transform: translateX(50%);
+}
+.scrollToMainButton.display button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #d3573c;
+  font-weight: 600;
+}
+
 /* Modal form */
 .bground {
   position: fixed;
@@ -395,10 +415,10 @@ body {
 .bground h1 {
   color: initial;
 }
-.bground .content {
+.bground .modalContent {
   position: absolute;
   min-width: fit-content;
-  width: 50%;
+  width: 550px;
   height: auto;
   padding: 1.5rem;
   background: #db8876;
@@ -409,22 +429,22 @@ body {
   box-sizing: border-box;
   overflow: hidden;
 }
-.bground .content .close:before,
-.bground .content .close:after {
+.bground .modalContent .close:before,
+.bground .modalContent .close:after {
   position: absolute;
-  left: 15px;
   content: " ";
   height: 33px;
   width: 3px;
   background-color: #fff;
+  margin: 50%;
 }
-.bground .content .close:before {
+.bground .modalContent .close:before {
   transform: rotate(45deg);
 }
-.bground .content .close:after {
+.bground .modalContent .close:after {
   transform: rotate(-45deg);
 }
-.bground .content .close {
+.bground .modalContent .close {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -435,28 +455,28 @@ body {
   transform: scale(0.7);
   z-index: 2;
 }
-.bground .content .formData {
+.bground .modalContent .formData {
   display: flex;
   flex-direction: column;
 }
-.bground .content .formData textarea {
+.bground .modalContent .formData textarea {
   height: 8rem;
 }
-.bground .content .modal-body {
+.bground .modalContent .modal-body {
   height: 100%;
 }
-.bground .content label {
+.bground .modalContent label {
   font-size: 1.5rem;
   color: #525252;
   margin: -1rem 0;
 }
-.bground .content .text-control {
+.bground .modalContent .text-control {
   width: 100%;
   height: 3rem;
   border: none;
   border-radius: 3px;
 }
-.bground .content .button {
+.bground .modalContent .button {
   padding: 1.4rem 2.5rem;
   font-size: 1rem;
   border: none;
@@ -491,11 +511,11 @@ body {
 .lightbox-bg .lightbox .close:before,
 .lightbox-bg .lightbox .close:after {
   position: absolute;
-  left: 15px;
   content: " ";
   height: 33px;
   width: 3px;
   background-color: #fff;
+  margin: 50%;
 }
 .lightbox-bg .lightbox .close:before {
   transform: rotate(45deg);
@@ -505,10 +525,13 @@ body {
 }
 .lightbox-bg .lightbox .close {
   position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 32px;
-  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
   opacity: 1;
   cursor: pointer;
   transform: scale(0.7);
@@ -524,7 +547,7 @@ body {
   cursor: pointer;
   position: absolute;
   width: 100px;
-  height: 100%;
+  height: 100px;
   padding: 16px;
   background: url("data:image/svg+xml,%3Csvg width='30' height='48' viewBox='0 0 30 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.360108 5.64L18.6801 24L0.360107 42.36L6.00011 48L30.0001 24L6.00011 3.88195e-06L0.360108 5.64Z' fill='%23911C1C'/%3E%3C/svg%3E%0A") no-repeat center;
   border: none;
@@ -594,6 +617,7 @@ body {
 @media screen and (min-width: 599px) and (max-width: 1024px) {
   .nav {
     margin: auto;
+    width: 550px;
   }
 }
 .nav .tags {
@@ -616,7 +640,7 @@ body {
 }
 @media screen and (min-width: 599px) and (max-width: 1024px) {
   .photographers header h1 {
-    margin-top: -7.5rem;
+    margin-top: -1rem;
   }
 }
 @media screen and (max-width: 599px) {

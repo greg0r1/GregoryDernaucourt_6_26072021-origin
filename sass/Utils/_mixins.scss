@@ -12,7 +12,7 @@
 }
 
 @mixin desktop-only {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }
@@ -71,11 +71,11 @@
     .close:before,
     .close:after {
         position: absolute;
-        left: 15px;
         content: " ";
         height: 33px;
         width: 3px;
         background-color: #fff;
+        margin: 50%;
     }
 
     .close:before {

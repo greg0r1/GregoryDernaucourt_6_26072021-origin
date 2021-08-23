@@ -1,5 +1,9 @@
 export default class EventService {
 
+    constructor() {
+        document.addEventListener('keyup', this.onKeyUp)
+    }
+
     static handleTagClick(call) {
         const array = Array.from(document.getElementsByClassName("tag")).forEach((element) => {
             element.addEventListener("click", () => call(element));
@@ -19,8 +23,6 @@ export default class EventService {
             dropdownElement.classList.toggle("show");
             chevronElement.classList.toggle("fa-chevron-up");
         });
-
-
     }
 
     static handleMediasFilter(call) {
@@ -31,6 +33,7 @@ export default class EventService {
 
     static closeModal(selector, elementToRemove) {
         selector.addEventListener("click", () => document.getElementById('main').removeChild(elementToRemove))
+        document.removeEventListener('keyup', this.onKeyUp)
     }
 
     static handleImagesClick(call) {
@@ -38,4 +41,11 @@ export default class EventService {
             element.addEventListener("click", () => call(element))
         });
     }
+
+    static handleInputsFormClick(call) {
+        const array = Array.from(document.getElementsByTagName("input")).forEach((element) => {
+            element.addEventListener("input", () => call(element));
+        });
+    }
+
 }

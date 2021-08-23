@@ -1,0 +1,19 @@
+.scrollToMainButton {
+    display: none;
+
+    &.display {
+        display: block;
+        position: fixed;
+        top: .2rem;
+        right: 50%;
+        transform: translateX(50%);
+
+        button {
+            padding: .5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background: $color-primary-txt-dark;
+            font-weight: 600;
+        }
+    }
+}
